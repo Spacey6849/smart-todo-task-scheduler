@@ -52,3 +52,7 @@ Prerequisites
 A web browser
 Live Server (for local development)
 Supabase account & API keys
+
+
+Frontend Prepared..
+Backend in progress.....

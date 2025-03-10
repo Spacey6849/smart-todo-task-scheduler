@@ -74,19 +74,19 @@ Stay tuned for updates! 🚀
 
 📸 Screenshots
 
-Homepage
+**Homepage**
 ![Homepage](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/85ba7f58525736c402558ab847542687af2f57ed/Images/homepage.jpg)
 
 
-Task Creation
+**Task Creation**
 
+![TaskCreation](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/85ba7f58525736c402558ab847542687af2f57ed/Images/homepage.jpg)
 
+__________________________________________________________________________________________________________________________________________________________
 
+![TaskCreation](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/dc710bc532b1ebb792a045ddfa8f1f4d6f711496/Images/CreateTask.jpg)
 
-User Authentication
+**User Authentication**
+![UserAuthentication](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/dc710bc532b1ebb792a045ddfa8f1f4d6f711496/Images/signIn1.jpg)
 
-Sign In
-
-Sign Up
-
-Logout
+![UserAuthentication](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/dc710bc532b1ebb792a045ddfa8f1f4d6f711496/Images/signup1.jpg)

@@ -1,4 +1,5 @@
 AI Smart Task(T-Buddy): it is an AI tool used for Scheduling your tasks and asking ai to reschedule your tasks based on the priority which will help you in doing your tasks on time and preventing the deadline
+(Homepage png)
 
 ✨ AI Smart Scheduler Features
 🎯 Priority-Based Rearrangement
@@ -31,7 +32,9 @@ Sync team tasks; optimize shared schedules.
 
 1. **Sign Up:** Register to start using the tool.
 2. **Sign In:** Log in to manage your tasks.
-
+3. create an task
+4. task Created
+   
 ⚠️ **Note:** The frontend and backend currently work independently, and backend development is ongoing. Full integration is still pending.
 
 To access the FastAPI backend, visit `http://127.0.0.1:8000/docs`.

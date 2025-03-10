@@ -1,59 +1,49 @@
-AI Smart Task(T-Buddy): it is an AI tool used for Scheduling your tasks and asking ai to reschedule your tasks based on the priority which will help you in doing your tasks on time and preventing the deadline
-(Homepage png)
+# AI Smart Task (T-Buddy)
 
-✨ AI Smart Scheduler Features
-🎯 Priority-Based Rearrangement
-Tasks auto-sort by priority (Low, Medium, High).
+**AI Smart Task (T-Buddy)** is an AI-powered tool designed to help you schedule tasks efficiently and reschedule them based on priority. It ensures timely task completion while preventing missed deadlines.
 
-⏰ Deadline Awareness
-Urgent tasks move up; countdown timers for deadlines.
+---
 
-🧠 Contextual Rescheduling
-AI estimates task duration and handles dependencies.
+## ✨ AI Smart Scheduler Features
 
-🔔 Smart Notifications
-Reminders for high-priority and urgent tasks.
+✅ **Priority-Based Rearrangement** – Tasks auto-sort by priority (Low, Medium, High).  
+✅ **Deadline Awareness** – Urgent tasks move up with countdown timers for deadlines.  
+✅ **Contextual Rescheduling** – AI estimates task duration and handles dependencies.  
+✅ **Smart Notifications** – Get reminders for high-priority and urgent tasks.  
+✅ **Calendar Sync** – Integrates with Google Calendar, Outlook, and more.  
+✅ **AI Suggestions** – Breaks tasks into subtasks and suggests optimal times.  
+✅ **Custom Rules** – Set custom priorities with manual overrides.  
+✅ **Team Collaboration** – Sync and optimize shared team tasks.  
 
-📅 Calendar Sync
-Integrates with Google Calendar, Outlook, etc.
-
-💡 AI Suggestions
-Breaks tasks into subtasks; suggests optimal times.
-
-⚙️ Custom Rules
-Set custom priorities; manually override AI.
-
-👥 Team Collaboration
-Sync team tasks; optimize shared schedules.
-
-
+---
 
 ## 🎯 How It Works
 
-1. **Sign Up:** Register to start using the tool.
-2. **Sign In:** Log in to manage your tasks.
-3. create an task
-4. task Created
-   
-⚠️ **Note:** The frontend and backend currently work independently, and backend development is ongoing. Full integration is still pending.
+1. **Sign Up** – Register to start using the tool.  
+2. **Sign In** – Log in to manage your tasks.  
 
-To access the FastAPI backend, visit `http://127.0.0.1:8000/docs`.
+⚠️ **Note:** The frontend and backend currently work independently. Backend development is ongoing, and full integration is in progress.
 
-To run the FastAPI backend with Uvicorn, use this command (if the program is nested in a file):
+🔗 **To access the FastAPI backend**, visit: `http://127.0.0.1:8000/docs`
 
-```bash
+📌 **Run the FastAPI backend with Uvicorn:**
+```sh
 uvicorn foldername.openaifrfr:app --reload
 ```
 
+---
+
 ## 🛠 Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend:** FastAPI, Python
-- **Database:** Supabase (PostgreSQL)
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** FastAPI, Python  
+- **Database:** Supabase (PostgreSQL)  
+
+---
 
 ## 📦 Setup & Usage
 
-```bash
+```sh
 # Clone the repository
 git clone https://github.com/Spacey6849/smart-todo-task-scheduler.git
 
@@ -72,8 +62,14 @@ pip install -r requirements.txt
 uvicorn openaifrfr:app --reload
 ```
 
-API documentation is available at `http://127.0.0.1:8000/docs`.
+📌 API documentation is available at `http://127.0.0.1:8000/docs`.
 
-🛠 Current Development Status
+---
 
-Currently, the frontend and backend are working independently. Integration is in progress to ensure seamless communication between both components.
+## 🚀 Current Development Status
+
+Currently, the frontend and backend are working **independently**. The integration process is **in progress** to enable seamless communication between both components.
+
+Stay tuned for updates! 🚀
+
+

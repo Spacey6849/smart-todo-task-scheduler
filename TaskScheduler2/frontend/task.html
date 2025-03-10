@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <title>Create your Task</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-[#FFFFFF] group/design-root overflow-x-hidden" style='font-family: "Plus Jakarta Sans", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <!-- Updated Header Section -->
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#EEEEEE] px-4 sm:px-10 py-3">
+          <a href="index.html" class="flex items-center gap-4 text-black cursor-pointer">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <h2 class="text-black text-lg font-bold leading-tight tracking-[-0.015em]">AI T-Buddy</h2>
+          </a>
+          <button onclick="toggleSidebar()" class="p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+            ☰
+          </button>
+        </header>
+        
+        <!-- Sidebar -->
+        <div class="hidden fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-4" id="sidebar">
+          <button onclick="toggleSidebar()" class="absolute top-2 right-2 text-black text-lg">✖</button>
+          <ul class="mt-6 space-y-4">
+            <li><a href="signin.html" class="block text-black hover:underline">Sign in</a></li>
+            <li><a href="signup.html" class="block text-black hover:underline">Sign up</a></li>
+            <li><a href="profile.html" class="block text-black hover:underline">Profile</a></li>
+          </ul>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex flex-1 overflow-hidden">
+          <!-- Right Side: Task Creation -->
+          <div class="w-full md:w-1/2 p-4 border-l border-[#EEEEEE] ml-auto">
+            <div class="flex flex-col gap-6">
+              <div class="flex flex-col gap-2">
+                <label class="text-black text-sm font-medium leading-normal">Select Date and Time</label>
+                <input id="datetime-picker" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black" placeholder="Select Date and Time" readonly />
+              </div>
+              
+              <div class="flex flex-col gap-2">
+                <label class="text-black text-sm font-medium leading-normal">Task Priority</label>
+                <div class="flex items-center gap-2">
+                  <button id="priority-low" class="flex-1 p-2 rounded-lg bg-[#EEEEEE] text-black hover:bg-gray-200" onclick="setPriority('low', this)">Low</button>
+                  <button id="priority-medium" class="flex-1 p-2 rounded-lg bg-[#EEEEEE] text-black hover:bg-gray-200" onclick="setPriority('medium', this)">Medium</button>
+                  <button id="priority-high" class="flex-1 p-2 rounded-lg bg-[#EEEEEE] text-black hover:bg-gray-200" onclick="setPriority('high', this)">High</button>
+                </div>
+              </div>
+              
+              <div class="flex flex-col gap-2">
+                <label class="text-black text-sm font-medium leading-normal">Task Title</label>
+                <input id="task-title" class="w-full p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black" placeholder="Enter task title" />
+              </div>
+              
+              <div class="flex justify-end gap-3">
+                <button class="min-w-[84px] h-10 px-4 bg-[#EEEEEE] text-black rounded-full">Cancel</button>
+                <button class="min-w-[84px] h-10 px-4 bg-black text-white rounded-full" onclick="createTask()">Create Task</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Left Side: Task List -->
+          <div class="w-full md:w-1/2 p-4 bg-[#FAFAFA]">
+            <h2 class="text-black text-lg font-bold mb-4">Tasks</h2>
+            <div id="task-list" class="flex flex-col gap-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ChatGPT-style Input Box -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-300 p-4">
+      <div class="max-w-2xl mx-auto flex items-center gap-2 border rounded-lg px-4 py-2 shadow-md">
+        <textarea id="chat-input" 
+          class="flex-1 resize-none bg-transparent outline-none p-2 text-black"
+          rows="1"
+          placeholder="Ask AI for help..."
+          oninput="adjustInputHeight(event)"
+          onkeydown="handleEnter(event)">
+        </textarea>
+        <button class="bg-black text-white px-4 py-2 rounded-lg" onclick="submitToAI()">Send</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      // Configure Flatpickr with AM/PM
+      flatpickr("#datetime-picker", {
+        enableTime: true,
+        dateFormat: "Y-m-d h:i K", // 'K' for AM/PM
+        minDate: "today",
+        time_24hr: false, // Use 12-hour format
+      });
+
+      let selectedPriority = "medium";
+      let selectedPriorityButton = document.getElementById("priority-medium");
+      
+      function setPriority(priority, button) {
+        selectedPriorityButton.classList.remove("bg-black", "text-white");
+        button.classList.add("bg-black", "text-white");
+        selectedPriority = priority;
+        selectedPriorityButton = button;
+      }
+
+      function createTask(taskTitle = null) {
+        if (!taskTitle) {
+          taskTitle = document.getElementById("task-title").value;
+        }
+        const taskDateTime = document.getElementById("datetime-picker").value;
+        if (!taskTitle) { alert("Please enter a task!"); return; }
+
+        const taskList = document.getElementById("task-list");
+        const taskItem = document.createElement("div");
+        taskItem.className = "p-4 rounded-lg border bg-white relative";
+        taskItem.innerHTML = `
+          <div class='flex justify-between'>
+            <p>${taskTitle}</p>
+            <p>${taskDateTime || "No date"}</p>
+          </div>
+          <div class='flex justify-between mt-2'>
+            <span class='text-sm ${getPriorityColor(selectedPriority)}'>${selectedPriority}</span>
+            <span id='countdown-${Date.now()}' class='text-sm text-gray-500'></span>
+          </div>
+          <button onclick="deleteTask(this)" class="absolute top-2 right-2 text-gray-500 hover:text-red-500">
+            ✖
+          </button>
+        `;
+        taskList.appendChild(taskItem);
+
+        if (taskDateTime) {
+          startCountdown(taskDateTime, `countdown-${Date.now()}`);
+        }
+
+        document.getElementById("task-title").value = "";
+        document.getElementById("datetime-picker").value = "";
+        setPriority("medium", document.getElementById("priority-medium"));
+      }
+
+      function deleteTask(button) {
+        const taskItem = button.closest("div");
+        const taskTitle = taskItem.querySelector("p").textContent;
+
+        if (confirm(`Are you sure you want to delete the task: "${taskTitle}"?`)) {
+          taskItem.remove();
+        }
+      }
+
+      function getPriorityColor(priority) {
+        switch (priority) {
+          case "low": return "text-green-500";
+          case "medium": return "text-yellow-500";
+          case "high": return "text-red-500";
+          default: return "text-gray-500";
+        }
+      }
+
+      function startCountdown(taskDateTime, countdownId) {
+        const countdownElement = document.getElementById(countdownId);
+        const taskDate = new Date(taskDateTime).getTime();
+
+        const interval = setInterval(() => {
+          const now = new Date().getTime();
+          const distance = taskDate - now;
+
+          if (distance <= 0) {
+            clearInterval(interval);
+            countdownElement.textContent = "Time's up!";
+            return;
+          }
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          countdownElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }, 1000);
+      }
+
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("hidden");
+      }
+
+      function adjustInputHeight(event) {
+        event.target.style.height = "auto";
+        event.target.style.height = event.target.scrollHeight + "px";
+      }
+
+      function handleEnter(event) {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          submitToAI();
+        }
+      }
+
+      async function submitToAI() {
+        const inputBox = document.getElementById("chat-input");
+        const userInput = inputBox.value.trim();
+        if (!userInput) return;
+
+        // Simulate API call (replace with actual API endpoint)
+        const response = await fetch("https://api.example.com/ai-model", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt: userInput }),
+        });
+
+        const data = await response.json();
+        alert(`AI Response: ${data.response}`); // Display AI response (replace with your logic)
+        inputBox.value = "";
+        inputBox.style.height = "auto";
+      }
+    </script>
+  </body>
+</html>

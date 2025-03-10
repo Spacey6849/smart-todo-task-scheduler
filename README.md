@@ -72,4 +72,21 @@ Currently, the frontend and backend are working **independently**. The integrati
 
 Stay tuned for updates! 🚀
 
+📸 Screenshots
 
+Homepage
+
+
+
+Task Creation
+
+
+
+
+User Authentication
+
+Sign In
+
+Sign Up
+
+Logout

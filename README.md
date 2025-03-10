@@ -24,6 +24,8 @@ Set custom priorities; manually override AI.
 
 👥 Team Collaboration
 Sync team tasks; optimize shared schedules.
+
+
 🎯 How It Works
 1. Sign Up
 Sign up To Start using  Sing up Button

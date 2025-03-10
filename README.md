@@ -28,7 +28,7 @@ Sync team tasks; optimize shared schedules.
 
 🎯 How It Works
 1. Sign Up
-Sign up To Start using  Sing up Button
+Sign up To Start using  Sign up Button
 
 
 

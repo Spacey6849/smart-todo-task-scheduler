@@ -75,7 +75,7 @@ Stay tuned for updates! 🚀
 📸 Screenshots
 
 Homepage
-
+![Homepage](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/85ba7f58525736c402558ab847542687af2f57ed/Images/homepage.jpg)
 
 
 Task Creation

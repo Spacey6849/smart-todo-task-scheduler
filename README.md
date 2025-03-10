@@ -26,33 +26,48 @@ Set custom priorities; manually override AI.
 Sync team tasks; optimize shared schedules.
 
 
-🎯 How It Works
-1. Sign Up
-Sign up To Start using  Sign up Button
 
+## 🎯 How It Works
 
+1. **Sign Up:** Register to start using the tool.
+2. **Sign In:** Log in to manage your tasks.
 
-2. Sign In
-Log in to access the AI Task tool
+⚠️ **Note:** The frontend and backend currently work independently, and backend development is ongoing. Full integration is still pending.
 
+To access the FastAPI backend, visit `http://127.0.0.1:8000/docs`.
 
+To run the FastAPI backend with Uvicorn, use this command (if the program is nested in a file):
 
-🛠 Tech Stack
-Frontend: HTML, CSS, JavaScript
-Backend: Supabase (PostgreSQL + Authentication)
-Authentication: Supabase Auth
-Database: Supabase (PostgreSQL)
+```bash
+uvicorn foldername.openaifrfr:app --reload
+```
 
+## 🛠 Tech Stack
 
+- **Frontend:** HTML, CSS, JavaScript
+- **Backend:** FastAPI, Python
+- **Database:** Supabase (PostgreSQL)
 
-📦 Installation & Setup
-To run the project locally, follow these steps:
+## 📦 Setup & Usage
 
-Prerequisites
-A web browser
-Live Server (for local development)
-Supabase account & API keys
+```bash
+# Clone the repository
+git clone https://github.com/Spacey6849/smart-todo-task-scheduler.git
 
+# Navigate to the project directory
+cd smart-todo-task-scheduler
 
-Frontend Prepared..
-Backend in progress.....
+# Set up and activate the virtual environment
+python -m venv .venv
+.venv\Scripts\activate  # Windows
+source .venv/bin/activate  # Mac/Linux
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the FastAPI backend
+uvicorn openaifrfr:app --reload
+```
+
+API documentation is available at `http://127.0.0.1:8000/docs`.
+

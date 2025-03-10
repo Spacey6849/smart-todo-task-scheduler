@@ -71,3 +71,7 @@ uvicorn openaifrfr:app --reload
 
 API documentation is available at `http://127.0.0.1:8000/docs`.
 
+🛠 Current Development Status
+
+Currently, the frontend and backend are working independently. Integration is in progress to ensure seamless communication between both components.
+

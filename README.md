@@ -220,7 +220,14 @@ Currently, the frontend and backend are working **independently**. The integrati
 
 Stay tuned for updates! 🚀
 
-IMAGES AS FOLLOWS : 
 
+
+## 📸 UI Screenshots
+
+### 🏠 Homepage
+![HomePage](images/homepage.jpg)
+
+### 🔐 Sign-In Page
+![Sign-In](images/signin1.jpg)
 
 

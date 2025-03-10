@@ -1,68 +1,29 @@
 AI Smart Task(T-Buddy): it is an AI tool used for Scheduling your tasks and asking ai to reschedule your tasks based on the priority which will help you in doing your tasks on time and preventing the deadline
 
+✨ AI Smart Scheduler Features
+🎯 Priority-Based Rearrangement
+Tasks auto-sort by priority (Low, Medium, High).
 
+⏰ Deadline Awareness
+Urgent tasks move up; countdown timers for deadlines.
 
-🚀 Features
-Priority-Based Task Rearrangement
-1.Dynamic Prioritization:
+🧠 Contextual Rescheduling
+AI estimates task duration and handles dependencies.
 
-Tasks are automatically rearranged based on their priority levels (e.g., Low, Medium, High).
+🔔 Smart Notifications
+Reminders for high-priority and urgent tasks.
 
-High-priority tasks are moved to the top of the list, while low-priority tasks are pushed down.
+📅 Calendar Sync
+Integrates with Google Calendar, Outlook, etc.
 
-User-Defined Priorities:
+💡 AI Suggestions
+Breaks tasks into subtasks; suggests optimal times.
 
-Users can manually set task priorities, and the AI will respect these settings while rearranging tasks.
+⚙️ Custom Rules
+Set custom priorities; manually override AI.
 
-2. Deadline Awareness
-Urgency Detection:
-
-The AI analyzes task deadlines and moves tasks with approaching deadlines higher in the list.
-
-Tasks with no deadlines are treated as low priority by default.
-
-Countdown Timers:
-
-Each task displays a countdown timer showing how much time is left until the deadline.
-
-3. Contextual Rescheduling
-Time Estimation:
-
-The AI estimates how long each task will take to complete based on historical data or user input.
-
-It rearranges tasks to ensure that high-priority tasks with shorter completion times are addressed first.
-
-Task Dependencies:
-
-The AI identifies tasks that depend on the completion of other tasks and schedules them accordingly.
-
-4. Smart Notifications
-Reminders:
-
-Users receive reminders for high-priority tasks and tasks with approaching deadlines.
-
-Proactive Alerts:
-
-The AI sends alerts if it detects that a task is at risk of being delayed.
-
-5. Integration with Calendars
-Calendar Sync:
-
-The AI integrates with external calendars (e.g., Google Calendar, Outlook) to sync tasks and deadlines.
-
-Time Blocking:
-
-It automatically blocks time on the user’s calendar for high-priority tasks.
-
-6. AI-Powered Suggestions
-Task Breakdown:
-
-The AI suggests breaking down large tasks into smaller, manageable subtasks.
-
-Optimal Scheduling:
-
-It recommends the best times to work on tasks based on the user’s productivity patterns (e.g., morning vs. evening).
-
+👥 Team Collaboration
+Sync team tasks; optimize shared schedules.
 🎯 How It Works
 1. Sign Up
 Sign up To Start using  Sing up Button

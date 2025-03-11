@@ -1,76 +1,101 @@
-# AI Smart Task (T-Buddy)
+# Smart Task Scheduler
 
-**AI Smart Task (T-Buddy)** is an AI-powered tool designed to help you schedule tasks efficiently and reschedule them based on priority. It ensures timely task completion while preventing missed deadlines.
+## Overview
 
----
+Smart Task Scheduler is a task management application designed to help users efficiently schedule and track their tasks. It utilizes modern web technologies including React (Vite), Tailwind CSS, Supabase (for backend services), and TypeScript.
 
-## ✨ AI Smart Scheduler Features
+## Features
 
-✅ **Priority-Based Rearrangement** – Tasks auto-sort by priority (Low, Medium, High).  
-✅ **Deadline Awareness** – Urgent tasks move up with countdown timers for deadlines.  
-✅ **Contextual Rescheduling** – AI estimates task duration and handles dependencies.  
-✅ **Smart Notifications** – Get reminders for high-priority and urgent tasks.  
-✅ **Calendar Sync** – Integrates with Google Calendar, Outlook, and more.  
-✅ **AI Suggestions** – Breaks tasks into subtasks and suggests optimal times.  
-✅ **Custom Rules** – Set custom priorities with manual overrides.  
-✅ **Team Collaboration** – Sync and optimize shared team tasks.  
+- User authentication (via Supabase)
+- Task creation, editing, and deletion
+- Task categorization and prioritization
+- Responsive UI with Tailwind CSS
+- Real-time updates
 
----
+## Tech Stack
 
-## 🎯 How It Works
+- **Frontend:** React (Vite), TypeScript, Tailwind CSS
+- **Backend:** Supabase (PostgreSQL, Authentication)
+- **Build Tool:** Vite
+- **Configuration:** ESLint, PostCSS, TypeScript
 
-1. **Sign Up** – Register to start using the tool.  
-2. **Sign In** – Log in to manage your tasks.  
+## Folder Structure
 
-⚠️ **Note:** The frontend and backend currently work independently. Backend development is ongoing, and full integration is in progress.
-
-🔗 **To access the FastAPI backend**, visit: `http://127.0.0.1:8000/docs`
-
-📌 **Run the FastAPI backend with Uvicorn:**
-```sh
-uvicorn foldername.openaifrfr:app --reload
+```
+Smart Task Scheduler/
+├── .env                   # Environment variables
+├── .gitignore             # Git ignore file
+├── eslint.config.js       # ESLint configuration
+├── index.html             # Main HTML file
+├── package.json           # Project metadata and dependencies
+├── package-lock.json      # Lock file for npm
+├── postcss.config.js      # PostCSS configuration
+├── tailwind.config.js     # Tailwind CSS configuration
+├── tsconfig.app.json      # TypeScript configuration for app
+├── tsconfig.json          # TypeScript global configuration
+├── tsconfig.node.json     # TypeScript configuration for Node
+├── vite.config.ts         # Vite configuration
+├── .prompt/               # Prompt-related data (if any)
+├── dist/                  # Build output directory
+├── src/                   # Main source code
+├── supabase/              # Supabase configurations
 ```
 
----
+## Setup Instructions
 
-## 🛠 Tech Stack
+### Prerequisites
 
-- **Frontend:** HTML, CSS, JavaScript  
-- **Backend:** FastAPI, Python  
-- **Database:** Supabase (PostgreSQL)  
+- Node.js (LTS version recommended)
+- npm or yarn
+- Supabase account and API keys
 
----
+### Installation
 
-## 📦 Setup & Usage
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/yourusername/smart-task-scheduler.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```sh
+   cd smart-task-scheduler
+   ```
+
+3. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+4. Set up the environment variables:
+
+   - Create a `.env` file in the root directory and add the required Supabase keys and configurations.
+
+5. Run the development server:
+
+   ```sh
+   npm run dev
+   ```
+
+6. Open `http://localhost:5173/` in your browser.
+
+## Deployment
+
+To deploy the project, use:
 
 ```sh
-# Clone the repository
-git clone https://github.com/Spacey6849/smart-todo-task-scheduler.git
-
-# Navigate to the project directory
-cd smart-todo-task-scheduler
-
-# Set up and activate the virtual environment
-python -m venv .venv
-.venv\Scripts\activate  # Windows
-source .venv/bin/activate  # Mac/Linux
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the FastAPI backend
-uvicorn openaifrfr:app --reload
+npm run build
 ```
 
-📌 API documentation is available at `http://127.0.0.1:8000/docs`.
+This will generate production-ready files inside the `dist/` folder.
 
----
+## Contribution
 
-## 🚀 Current Development Status
+Feel free to fork the repository, create a branch, and submit a pull request with your improvements.
 
-Currently, the frontend and backend are working **independently**. The integration process is **in progress** to enable seamless communication between both components.
 
-Stay tuned for updates! 🚀
 
 📸 Screenshots
 

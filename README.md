@@ -100,13 +100,11 @@ Feel free to fork the repository, create a branch, and submit a pull request wit
 📸 Screenshots
 
 **Homepage**
-![Homepage](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/85ba7f58525736c402558ab847542687af2f57ed/Images/homepage.jpg)
+![Homepage](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/4d4450d669c5dcbe1f60aa172c018e3ca299c930/HomePage.png)
 
 **Task Creation**
 
-![TaskCreation](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/dc710bc532b1ebb792a045ddfa8f1f4d6f711496/Images/CreateTask.jpg)
+![TaskCreation](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/4d4450d669c5dcbe1f60aa172c018e3ca299c930/Task.png)
 
 **User Authentication**
-![UserAuthentication](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/dc710bc532b1ebb792a045ddfa8f1f4d6f711496/Images/signIn1.jpg)
-__________________________________________________________________________________________________________________________________________________
-![UserAuthentication](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/dc710bc532b1ebb792a045ddfa8f1f4d6f711496/Images/signup1.jpg)
+![UserAuthentication](https://github.com/Spacey6849/smart-todo-task-scheduler/blob/4d4450d669c5dcbe1f60aa172c018e3ca299c930/SignIN.png)
